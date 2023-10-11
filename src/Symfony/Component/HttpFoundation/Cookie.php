@@ -22,14 +22,14 @@ class Cookie
     public const SAMESITE_LAX = 'lax';
     public const SAMESITE_STRICT = 'strict';
 
-    protected $name;
-    protected $value;
-    protected $domain;
-    protected $expire;
-    protected $path;
-    protected $secure;
-    protected $httpOnly;
-    protected $partitioned;
+    protected string $name;
+    protected ?string $value;
+    protected ?string $domain;
+    protected int|string $expire;
+    protected string $path;
+    protected ?bool $secure;
+    protected bool $httpOnly;
+    protected bool $partitioned;
 
     private bool $raw;
     private ?string $sameSite = null;
